@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Object Properties</title>
+</head>
+<body>
+	<p th:text="'To call toString(); ' + ${thing}" />
+	<p th:text="'first name is ' +${thing.firstName}" />
+	<p th:text="'last name is ' +${thing.lastName}" />
+	<p th:text="'full name is ' +${thing.fullName}" />
+
+	<!-- this uses a default model attribute name -->
+	<p th:text="'I am not a thing, I am a ' + ${person} + '!'" />
+
+	<p th:text="|My full name is ${thing.getFullName()}!|" />
+</body>
+</html>
